@@ -1,6 +1,7 @@
 import React , {useState} from 'react';
 import './App.css';
-//import person from './Person/Person';
+import styled from 'styled-components';
+//import './Person/Person.css';
 
 const Practice = () =>{
 
@@ -23,7 +24,11 @@ const Practice = () =>{
         backgroundColor : 'red',
         color : 'white',
         border : '1px solid black',
-        padding : '7px'
+        padding : '7px',
+        ':hover':{
+            backgroundColor : 'black',
+            color : 'white'
+        }
     }
     let printData = null;
 
@@ -37,6 +42,10 @@ const Practice = () =>{
             })
     }</div>);
     buttonStyle.backgroundColor = 'green';
+    buttonStyle[':hover'] ={
+        backgroundColor : 'red',
+        color : 'white'
+    }
     }
    
 const toggleDataEvent = () =>{
@@ -87,6 +96,9 @@ const delCharEvent = (id) =>{
 
 
 }
+
+
+
 let charlist = (
         <div>
             {
@@ -121,18 +133,40 @@ if(accData.person.length <=1){
 
 }
 
-const heightSt = {
-    height : '20px',
-    marginTop : '20px'
+// const heightSt = {
+//     height : '20px',
+//     marginTop : '20px'
+// }
+
+const StyleDiv = styled.div`
+width: 50%;
+margin: 10px auto;
+border: 2px solid #eee;
+box-shadow: 1px #ccc;
+text-align: center;
+padding: 10px;
+
+@media (min-width : 500px){
+    width : 450px
 }
 
+`;
+
 const Person = (props) =>{
+
+// const PersonStyle = {
+//     '@media(min-width : 500px)':{
+//         width : '450px'
+//     }
+// }
+//styleroot is used for mediaquery not required for psuedo css
     return(
-        <div className = 'App'>
+            
+            <StyleDiv>
             <input  type = 'text' onChange = {props.changeName} value = {props.name}></input>
             <p onClick = {props.DeleteData}>I'm {props.name} and I'm {props.age} Year Old</p>
-            
-        </div>
+            </StyleDiv>
+        
     );
 }
 
