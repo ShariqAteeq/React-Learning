@@ -1,0 +1,12 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+//import App from './App';
+import registerServiceWorker from './registerServiceWorker';
+//import Practice from './Practice';
+//import Practice from './Practice';
+import Japp from './containers/wb';
+// import Product from './LifeCycleMethods';
+//import Ass2 from './Ass2';
+ReactDOM.render(<Japp appTitle = "Person Manager"/>, document.getElementById('root'));
+registerServiceWorker();

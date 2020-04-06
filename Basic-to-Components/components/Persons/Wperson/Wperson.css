@@ -1,0 +1,14 @@
+.Wperson{
+    width: 30%;
+    border: 1px solid blue;
+    box-shadow: 0px 2px 3px #ccc;
+    margin: auto;
+    text-align: center;
+    padding: 8px;
+}
+
+@media (min-width : 400px){
+    .Wperson{
+        width: 500px;
+    }
+}
