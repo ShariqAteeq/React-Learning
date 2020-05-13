@@ -1,0 +1,43 @@
+//js file
+
+function Person(prps){
+  return(
+    //here we use className in react
+    //prps is a function arguement
+      <div className = "person">
+      <h1>{prps.name}</h1>
+      <p>age is {prps.age}</p>
+      </div>
+  );
+}
+/*
+//use to show on window
+ReactDOM.render(<Person name = "shariq" age = "69"/>,document.querySelector("#p1")
+               );
+ReactDOM.render(<Person name = "shariq" age = "69" />,document.querySelector("#p2")
+               );
+               */
+//we can write ona single render by creating variable and in a single html div
+var app = (
+  <div>
+  <Person name = "shariq" age = "69" />
+  <Person name = "harry" age = "89" />
+    </div>
+);
+//call this app variable in render
+ReactDOM.render(app,
+document.querySelector("#app"));
+
+//css file
+
+.person{
+  border : 2px solid black;
+  width : 200px;
+  margin : 10px;
+  padding :10px;
+  display : inline-block;
+}
+
+//html
+<div id = "app"></div>
+
